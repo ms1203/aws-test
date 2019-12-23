@@ -1,5 +1,6 @@
 const express = require('express')
 const SmartApp = require('@smartthings/smartapp')
+const fs = require('fs');
 
 const server = express()
 const PORT = 5555
@@ -45,3 +46,8 @@ server.post('/', (req, res, next) => { // eslint-disable-line no-unused-vars
 
 /* Start listening at your defined PORT */
 server.listen(PORT, () => console.log(`Server is up and running on port ${PORT}`))
+
+
+if (fs.existsSync('./config/smartthings_rsa.pub')) {
+    smartapp.publicKey('@config/smartthings_rsa.pub');
+}
