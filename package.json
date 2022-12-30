@@ -54,7 +54,7 @@
     "chai-datetime": "^1.5.0",
     "conventional-changelog-eslint": "~3.0.1",
     "dotenv": "^8.1.0",
-    "mocha": "^6.2.1",
+    "mocha": "^10.2.0",
     "nock": "^10.0.6",
     "nyc": "~13.3.0",
     "proxyquire": "^2.1.3",
